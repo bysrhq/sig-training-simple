@@ -13,4 +13,13 @@ public class SummaryUtil {
         return sum;
     }
 
+    public static void addInterest(Money balance, float numbers) {
+        Money interest = balance.multiply(numbers);
+        if (interest.greaterThan(0)) {
+            balance.add(interest);
+        } else {
+            balance.substract(interest);
+        }
+    }
+
 }
